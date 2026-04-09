@@ -5,21 +5,21 @@
 class Ouractl < Formula
   desc "A command line tool for your Oura Ring data"
   homepage "https://github.com/hagelstam/ouractl"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hagelstam/ouractl/releases/download/v0.3.0/ouractl_Darwin_x86_64.tar.gz"
-      sha256 "d5e94609460df7eb3cbb2fc6ba9fc760d433ebb08563275192d5bfdd5c74abd1"
+      url "https://github.com/hagelstam/ouractl/releases/download/v0.4.0/ouractl_Darwin_x86_64.tar.gz"
+      sha256 "dfadf1d3d52ecc27375ec2ceb837c67b00b855119ea579139117c25b61060a07"
 
       define_method(:install) do
         bin.install "ouractl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hagelstam/ouractl/releases/download/v0.3.0/ouractl_Darwin_arm64.tar.gz"
-      sha256 "20e4a54028e8baa7147e4660fbb0691f54dec17df9e49e1774641d1c5c1593c1"
+      url "https://github.com/hagelstam/ouractl/releases/download/v0.4.0/ouractl_Darwin_arm64.tar.gz"
+      sha256 "fa746e8b6672e3c9b6731056c57c65088cfb180010c007d10ffb41e3a146eba0"
 
       define_method(:install) do
         bin.install "ouractl"
@@ -29,15 +29,15 @@ class Ouractl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hagelstam/ouractl/releases/download/v0.3.0/ouractl_Linux_x86_64.tar.gz"
-      sha256 "b6c5930b329d04a26d4e32b3292b5b219306c3fc3a697cc824eb8fe78e41cb89"
+      url "https://github.com/hagelstam/ouractl/releases/download/v0.4.0/ouractl_Linux_x86_64.tar.gz"
+      sha256 "bd67d6f9fa36777241b5d0848354e58e46fd1cfcb5910d078027a2b379c5ebf9"
       define_method(:install) do
         bin.install "ouractl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hagelstam/ouractl/releases/download/v0.3.0/ouractl_Linux_arm64.tar.gz"
-      sha256 "f01ffb44e1a1d87768d4fdde0596bd3625796fe3fd34ba44410529edbcc6bc48"
+      url "https://github.com/hagelstam/ouractl/releases/download/v0.4.0/ouractl_Linux_arm64.tar.gz"
+      sha256 "20b7390f9b2e2f53aa25f635f896fb039272a7701a97bb3e59b31dd25ed8276a"
       define_method(:install) do
         bin.install "ouractl"
       end
